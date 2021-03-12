@@ -17,12 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Hole.cpp \
+    Status.cpp \
     main.cpp \
     Achi.cpp
 
 HEADERS += \
     Hole.h \
-    Achi.h
+    Achi.h \
+    Status.h
 
 FORMS += \
     Achi.ui

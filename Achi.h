@@ -2,6 +2,7 @@
 #define ACHI_H
 
 #include <QMainWindow>
+#include <Hole.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -9,7 +10,7 @@ namespace Ui {
 }
 QT_END_NAMESPACE
 
-class Hole;
+class Status;
 
 class Achi : public QMainWindow {
     Q_OBJECT
@@ -21,6 +22,11 @@ public:
 private:
     Ui::Achi *ui;
     Hole* m_holes[9];
+    Hole* old;
+    Status* status;
+    void resetSelectable();
+    void checkWinner();
+    void appendWinner(QString* string, Hole::State state);
 
 private slots:
     void play(int id);
